@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create User</title>
+</head>
+<body>
+<h1>Create New User</h1>
+
+<form method="POST">
+{{ form.hidden_tag() }}
+<p>
+{{ form.balance.label }}<br>
+{{ form.balance(size=32) }}<br>
+{{ form.commission_rate.label }}<br>
+{{ form.commission_rate(size=32) }}<br>
+{{ form.webhook_url.label }}<br>
+{{ form.webhook_url(size=32) }}<br>
+{{ form.submit() }}
+</p>
+</form>
+
+<a href="{{ url_for('main.admin') }}">Back to Admin Dashboard</a>
+
+</body>
+</html>
